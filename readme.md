@@ -1,1 +1,1 @@
-.\assets\photos\uiux main.png
+![](./assets/photos/uiux%20main.png)
