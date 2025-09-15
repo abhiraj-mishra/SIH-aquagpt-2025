@@ -152,8 +152,7 @@
             color: #888;
         }
 
-        .send-button {
-            background-color: #0ea5e9;
+        .voice-button, .send-button {
             border: none;
             border-radius: 50%;
             width: 40px;
@@ -163,6 +162,18 @@
             justify-content: center;
             cursor: pointer;
             margin-left: 10px;
+        }
+
+        .voice-button {
+            background-color: #2a2a2a;
+        }
+
+        .voice-button:hover {
+            background-color: #3a3a3a;
+        }
+
+        .send-button {
+            background-color: #0ea5e9;
         }
 
         .send-button:hover {
