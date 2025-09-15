@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatbot UI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <ul>
+        <li class="active"><span class="icon">&#128172;</span> Chat</li>
+        <li><span class="icon">&#128200;</span> Dashboard</li>
+        <li><span class="icon">&#9881;</span> Settings</li>
+        <li><span class="icon">&#128274;</span> Logout</li>
+      </ul>
+    </aside>
+    <main class="main-content">
+      <div class="chat-header">Chatbot</div>
+      <div class="chat-body">
+        <div class="message user-msg">What is INGRES?</div>
+        <div class="message bot-msg">
+          INGRES is a GIS-based web application for assessing dynamic groundwater resources in India.
+        </div>
+        <div class="message user-msg">How can I use it?</div>
+        <div class="message bot-msg">
+          You can use it through the INGRES portal<br>
+          <small>Searched from 4 sources.</small>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input type="text" placeholder="Type your message...">
+        <button>&#10148;</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
