@@ -1,103 +1,104 @@
-import Image from "next/image";
-
+// app/page.tsx
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex h-screen bg-[#1a1a1a] text-white">
+      {/* Sidebar */}
+      <div className="w-72 bg-[#2a2a2a] p-5 flex flex-col rounded-2xl m-4 mr-0">
+        <div className="flex items-center gap-3 p-4 rounded-xl cursor-pointer hover:bg-[#3a3a3a]">
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+          </svg>
+          Dashboard
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <div className="flex items-center gap-3 p-4 rounded-xl cursor-pointer bg-sky-600 border-2 border-sky-400">
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Chat
+        </div>
+
+        <div className="flex items-center gap-3 p-4 rounded-xl cursor-pointer hover:bg-[#3a3a3a]">
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="3" />
+            <path d="m12 1 3 6 6 3-6 3-3 6-3-6-6-3 6-3z" />
+          </svg>
+          Settings
+        </div>
+
+        <div className="flex items-center gap-3 p-4 rounded-xl cursor-pointer hover:bg-[#3a3a3a] mt-auto">
+          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16,17 21,12 16,7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
+          Logout
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col bg-[#2a2a2a] m-4 rounded-2xl overflow-hidden">
+        {/* Header */}
+        <div className="flex justify-between items-center px-8 py-5 border-b border-[#3a3a3a]">
+          <h1 className="text-2xl font-semibold">Aquagpt</h1>
+          <div className="w-10 h-10 bg-[#4a4a4a] flex items-center justify-center rounded-full">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 
+              1.79-4 4 1.79 4 4 4zm0 2c-2.67 
+              0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+            </svg>
+          </div>
+        </div>
+
+        {/* Chat Area */}
+        <div className="flex-1 flex flex-col px-8 py-6">
+          <button className="bg-[#3a3a3a] text-white px-5 py-3 rounded-xl mb-5 text-right cursor-pointer hover:bg-[#4a4a4a]">
+            Hello
+          </button>
+
+          <div className="text-white mb-6 leading-relaxed">
+            Hello, I am Aquagpt, an AI companion for the INGRES website. How can
+            I assist you today?
+          </div>
+
+          <button className="bg-[#3a3a3a] text-white px-5 py-3 rounded-xl mb-5 text-right cursor-pointer hover:bg-[#4a4a4a]">
+            What are the key policies for managing underground water in Rohini,
+            Delhi, including any restrictions, recharge requirements, and
+            regulatory guidelines?
+          </button>
+
+          <div className="text-white mb-5 leading-relaxed">
+            Rohini’s underground water policies focus on rainwater harvesting,
+            restrictions on new borewells, and mandatory recharge systems for
+            larger properties to combat falling water tables and saline
+            groundwater; permissions are regulated by the Central Ground Water
+            Authority, with penalties for illegal extraction and initiatives for
+            sustainable management.
+          </div>
+
+          <div className="text-sm text-gray-400 mb-6">
+            Searched from 4 sources.
+          </div>
+        </div>
+
+        {/* Input Area */}
+        <div className="flex items-center bg-[#3a3a3a] rounded-full px-6 py-3 m-6 mt-auto">
+          <input
+            type="text"
+            placeholder="Type your message..."
+            className="flex-1 bg-transparent border-none text-white text-base outline-none placeholder-gray-400"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <button className="ml-3 w-10 h-10 bg-[#2a2a2a] flex items-center justify-center rounded-full cursor-pointer hover:bg-[#3a3a3a]">
+            🎤
+          </button>
+          <button className="ml-3 w-10 h-10 bg-sky-600 flex items-center justify-center rounded-full cursor-pointer hover:bg-sky-700">
+            ➤
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
