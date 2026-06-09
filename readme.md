@@ -4,7 +4,6 @@
 
 > An AI-powered chatbot for exploring and understanding India's groundwater and water resource data using natural language.
 
-![AquaGPT UI](./uiux-main.png)
 
 ---
 
